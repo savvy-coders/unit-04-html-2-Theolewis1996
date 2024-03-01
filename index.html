@@ -2,3 +2,57 @@
 <!-- Remember to start by typing a single exclamation point (!) and then hitting enter or selecting the first dropdown option.-->
 <!-- This will give you the basic, necessary skeletal elements of a webpage so you can begin coding to our specific requirements! -->
 <!-- Good luck! You've got this! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form name="myForms" onsubmit="handleFormSubmit(event)">
+    <label>
+        Username
+        <input type="text" name="username" placeholder="Enter your username" required>
+    </label>
+
+    <label for="fruit">Favorite Fruit</label>
+    <input type="checkbox" id="fruit" name="fruit" value="apple"> Apple 
+    <input type="checkbox" id="fruit" name="fruit" value="banana"> Banana
+    <input type="checkbox" id="fruit" name="fruit" value="orange"> Orange
+
+    <label for="gender">Gender</label>
+    <input type="radio" id="gender" name="gender" value="male" required>Male
+    <input type="radio" id="gender" name="gender" value="female">Female
+    <input type="radio" id="gender" name="gender" value="other">Other
+
+    <label for="country">Country</label>
+    <select name="country" id="country" required>
+        <option value=""></option>
+        <option value="us">US</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+    </select>
+    <input type="submit">
+
+</form>
+    
+</body>
+</html>
+
+<script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+
+        var username = document.forms["myForms"]["username"].value;
+        var fruits = document.forms["myForms"]["fruit"].value;
+        var gender = document.forms["myForms"]["gender"].value;
+        var country = document.forms["myForms"]["country"].value;
+        
+        alert(username)
+        alert(fruits)
+        alert(gender)
+        alert(country)
+    }
+
+</script>
